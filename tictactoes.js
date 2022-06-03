@@ -20,7 +20,8 @@ btn.addEventListener('click', function onCLick(){
         btn.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    //makes the button ugly, but works for now
+    btn.disabled = true;
 });
 btn2.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -32,7 +33,7 @@ btn2.addEventListener('click', function onCLick(){
         btn2.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn2.disabled = true;
 });
 btn3.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -44,7 +45,7 @@ btn3.addEventListener('click', function onCLick(){
         btn3.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn3.disabled = true;
 });
 btn4.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -56,7 +57,7 @@ btn4.addEventListener('click', function onCLick(){
         btn4.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn4.disabled = true;
 });
 btn5.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -68,7 +69,7 @@ btn5.addEventListener('click', function onCLick(){
         btn5.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn5.disabled = true;
 });
 btn6.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -80,7 +81,7 @@ btn6.addEventListener('click', function onCLick(){
         btn6.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn6.disabled = true;
 });
 btn7.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -92,7 +93,7 @@ btn7.addEventListener('click', function onCLick(){
         btn7.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn7.disabled = true;
 });
 btn8.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -104,7 +105,7 @@ btn8.addEventListener('click', function onCLick(){
         btn8.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn8.disabled = true;
 });
 btn9.addEventListener('click', function onCLick(){
     //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
@@ -116,5 +117,5 @@ btn9.addEventListener('click', function onCLick(){
         btn9.innerText = "O";
         player1Turn = !player1Turn;
     }
-    
+    btn9.disabled = true;
 });
