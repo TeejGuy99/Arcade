@@ -7,6 +7,7 @@ const btn6 = document.getElementById("btn6");
 const btn7 = document.getElementById("btn7");
 const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
+const resetBtn = document.getElementById("resetButton");
 
 const playerScoreCard = document.getElementById("playerScore");
 
@@ -134,6 +135,10 @@ btn9.addEventListener('click', function onCLick(){
     checkWin();
 });
 
+resetBtn.addEventListener('click', function onCLick(){
+    resetGame();
+});
+
 //Brute force check for each possible win state for the player and computer
 //Hacky, but I already created an HTML skeleton of buttons instead of a JS object to manipulate through the DOM
 function checkWin(){
@@ -148,9 +153,11 @@ function checkWin(){
         disableButtons();
         playerScore++;
         playerScoreCard.innerText = playerScore;
-    }else if((btn4.innerText === "X") && (btn5.innerText === "X") && (btn6.innerText === "X")){
+    }
+    if((btn4.innerText === "X") && (btn5.innerText === "X") && (btn6.innerText === "X")){
         disableButtons();
-    }else if((btn7.innerText === "X") && (btn8.innerText === "X") && (btn9.innerText === "X")){
+    }
+    if((btn7.innerText === "X") && (btn8.innerText === "X") && (btn9.innerText === "X")){
         disableButtons();
     }
 }
@@ -166,13 +173,26 @@ function resetGame(){
 
 //Disable all buttons
 function disableButtons(){
-    btn.disable = true;
-    btn2.disable = true;
-    btn3.disable = true;
-    btn4.disable = true;
-    btn5.disable = true;
-    btn6.disable = true;
-    btn7.disable = true;
-    btn8.disable = true;
-    btn9.disable = true;
+    btn.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+}
+
+//Enable all buttons
+function enableButtons(){
+    btn1.disabled = false;
+    btn2.disabled = false;
+    btn3.disabled = false;
+    btn4.disabled = false;
+    btn5.disabled = false;
+    btn6.disabled = false;
+    btn7.disabled = false;
+    btn8.disabled = false;
+    btn9.disabled = false;
 }
