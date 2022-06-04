@@ -10,204 +10,339 @@ const btn9 = document.getElementById("btn9");
 const resetBtn = document.getElementById("resetBtn");
 
 const playerScoreCard = document.getElementById("playerScore");
+const computerScoreCard = document.getElementById("computerScore");
 
 let playerScore = 0;
 let computerScore = 0;
 let player1Turn = true;
 
 //Assign an event listener to each button, when clicked, flip the player turn bool and disable the button, then check for a win state
-btn.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    //makes the button ugly, but works for now
-    btn.disabled = true;
-    checkWin();
+btn.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  //makes the button ugly, but works for now
+  btn.disabled = true;
+  checkWin();
 });
-btn2.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn2.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn2.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn2.disabled = true;
-    checkWin();
+btn2.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn2.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn2.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn2.disabled = true;
+  checkWin();
 });
-btn3.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn3.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn3.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn3.disabled = true;
-    checkWin();
+btn3.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn3.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn3.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn3.disabled = true;
+  checkWin();
 });
-btn4.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn4.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn4.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn4.disabled = true;
-    checkWin();
+btn4.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn4.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn4.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn4.disabled = true;
+  checkWin();
 });
-btn5.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn5.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn5.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn5.disabled = true;
-    checkWin();
+btn5.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn5.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn5.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn5.disabled = true;
+  checkWin();
 });
-btn6.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn6.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn6.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn6.disabled = true;
-    checkWin();
+btn6.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn6.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn6.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn6.disabled = true;
+  checkWin();
 });
-btn7.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn7.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn7.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn7.disabled = true;
-    checkWin();
+btn7.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn7.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn7.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn7.disabled = true;
+  checkWin();
 });
-btn8.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn8.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn8.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn8.disabled = true;
-    checkWin();
+btn8.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn8.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn8.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn8.disabled = true;
+  checkWin();
 });
-btn9.addEventListener('click', function onClick(){
-    //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
-    //Or if it is not player1's turn, place an O and flip the boolean
-    if(player1Turn){
-        btn9.innerText = "X";
-        player1Turn = !player1Turn;
-    }else if(!player1Turn){
-        btn9.innerText = "O";
-        player1Turn = !player1Turn;
-    }
-    btn9.disabled = true;
-    checkWin();
+btn9.addEventListener("click", function onClick() {
+  //If it is player1's turn, place an X on CLick, then flip the boolean for player1Turn
+  //Or if it is not player1's turn, place an O and flip the boolean
+  if (player1Turn) {
+    btn9.innerText = "X";
+    player1Turn = !player1Turn;
+  } else if (!player1Turn) {
+    btn9.innerText = "O";
+    player1Turn = !player1Turn;
+  }
+  btn9.disabled = true;
+  checkWin();
 });
 
-resetBtn.addEventListener('click', function onClick(){
-    resetGame();
+resetBtn.addEventListener("click", function onClick() {
+  resetGame();
 });
 
 //Brute force check for each possible win state for the player and computer
 //Hacky, but I already created an HTML skeleton of buttons instead of a JS object to manipulate through the DOM
-function checkWin(){
-    // if((btn.innerText === "X") && (btn2.innerText === "X") && (btn3.innerText === "X")
-    // || (btn4.innerText === "X") && (btn5.innerText === "X") && (btn6.innerText === "X")
-    // || (btn7.innerText === "X") && (btn8.innerText === "X") && (btn9.innerText === "X")){
-    //  playerScore++;
-    //  playerScoreCard.innerText = playerScore;
-    // }
-    // console.log(btn4.innerText);
-    if((btn.innerText === "X") && (btn2.innerText === "X") && (btn3.innerText === "X")){
-        disableButtons();
-        playerScore++;
-        playerScoreCard.innerText = playerScore;
-    }
-    if((btn4.innerText === "X") && (btn5.innerText === "X") && (btn6.innerText === "X")){
-        disableButtons();
-    }
-    if((btn7.innerText === "X") && (btn8.innerText === "X") && (btn9.innerText === "X")){
-        disableButtons();
-    }
+function checkWin() {
+  checkPlayerWin();
+  checkComputerWin();
 }
 
-//Everything that gets changed to a permanent state during gameplay 
+//Everything that gets changed to a permanent state during gameplay
 //needs to be reset to 0 or baseline in this function
 //player 1 turn, buttons enabled, etc...
-function resetGame(){
-    player1Turn = true;
-    enableButtons();
-    clearButtonText();
+function resetGame() {
+  player1Turn = true;
+  enableButtons();
+  clearButtonText();
 }
 
 //Additional helper functions below
 
-//Disable all buttons
-function disableButtons(){
-    btn.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
+//Disable all buttons, set disable property to true
+function disableButtons() {
+  btn.disabled = true;
+  btn2.disabled = true;
+  btn3.disabled = true;
+  btn4.disabled = true;
+  btn5.disabled = true;
+  btn6.disabled = true;
+  btn7.disabled = true;
+  btn8.disabled = true;
+  btn9.disabled = true;
 }
 
-//Enable all buttons
-function enableButtons(){
-    btn.disabled = false;
-    btn2.disabled = false;
-    btn3.disabled = false;
-    btn4.disabled = false;
-    btn5.disabled = false;
-    btn6.disabled = false;
-    btn7.disabled = false;
-    btn8.disabled = false;
-    btn9.disabled = false;
+//Enable all buttons, set disable property to false
+function enableButtons() {
+  btn.disabled = false;
+  btn2.disabled = false;
+  btn3.disabled = false;
+  btn4.disabled = false;
+  btn5.disabled = false;
+  btn6.disabled = false;
+  btn7.disabled = false;
+  btn8.disabled = false;
+  btn9.disabled = false;
 }
 
-//Clear text in all buttons
-function clearButtonText(){
-btn.innerText = "";
-btn2.innerText = "";
-btn3.innerText = "";
-btn4.innerText = "";
-btn5.innerText = "";
-btn6.innerText = "";
-btn7.innerText = "";
-btn8.innerText = "";
-btn9.innerText = "";
+//Clear text in all buttons, set innertext to ""
+function clearButtonText() {
+  btn.innerText = "";
+  btn2.innerText = "";
+  btn3.innerText = "";
+  btn4.innerText = "";
+  btn5.innerText = "";
+  btn6.innerText = "";
+  btn7.innerText = "";
+  btn8.innerText = "";
+  btn9.innerText = "";
+}
+
+function checkPlayerWin() {
+  if (
+    btn.innerText === "X" &&
+    btn2.innerText === "X" &&
+    btn3.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+  if (
+    btn4.innerText === "X" &&
+    btn5.innerText === "X" &&
+    btn6.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+  if (
+    btn7.innerText === "X" &&
+    btn8.innerText === "X" &&
+    btn9.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+  if (
+    btn.innerText === "X" &&
+    btn4.innerText === "X" &&
+    btn7.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+  if (
+    btn2.innerText === "X" &&
+    btn5.innerText === "X" &&
+    btn8.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+  if (
+    btn3.innerText === "X" &&
+    btn6.innerText === "X" &&
+    btn9.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+  if (
+    btn1.innerText === "X" &&
+    btn5.innerText === "X" &&
+    btn9.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+  if (
+    btn3.innerText === "X" &&
+    btn5.innerText === "X" &&
+    btn7.innerText === "X"
+  ) {
+    disableButtons();
+    playerScore++;
+    playerScoreCard.innerText = playerScore;
+  }
+}
+
+function checkComputerWin() {
+  if (
+    btn.innerText === "O" &&
+    btn2.innerText === "O" &&
+    btn3.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
+  if (
+    btn4.innerText === "O" &&
+    btn5.innerText === "O" &&
+    btn6.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
+  if (
+    btn7.innerText === "O" &&
+    btn8.innerText === "O" &&
+    btn9.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
+  if (
+    btn.innerText === "O" &&
+    btn4.innerText === "O" &&
+    btn7.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
+  if (
+    btn2.innerText === "O" &&
+    btn5.innerText === "O" &&
+    btn8.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
+  if (
+    btn3.innerText === "O" &&
+    btn6.innerText === "O" &&
+    btn9.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
+  if (
+    btn1.innerText === "O" &&
+    btn5.innerText === "O" &&
+    btn9.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
+  if (
+    btn3.innerText === "O" &&
+    btn5.innerText === "O" &&
+    btn7.innerText === "O"
+  ) {
+    disableButtons();
+    computerScore++;
+    computerScoreCard.innerText = computerScore;
+  }
 }
